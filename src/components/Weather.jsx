@@ -57,7 +57,7 @@ const Weather = () => {
         <input
           type="text"
           onInput={handleInput}
-          onKeyPress={handleInputKeyPress}
+          onKeyDown={handleInputKeyPress}
           placeholder="Search"
         />
         <img src={search_icon} alt="search" onClick={handleButtonClick}/>
