@@ -1,14 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Weather.css";
 import search_icon from "../assets/icons/search.png";
-import clear_icon from "../assets/icons/clear.png";
-// import cloud_icon from '../assets/icons/cloud.png'
-// import drizzle_icon from '../assets/icons/drizzle.png'
-// import rain_icon from '../assets/icons/rain.png'
-// import snow_icon from '../assets/icons/snow.png'
 import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
-import weatherSpray_icons from "../assets/icons/1stSetMonoIndex.png";
 
 const Weather = () => {
   let inputRef = useRef(null);
@@ -26,7 +20,7 @@ const Weather = () => {
 
   const handleButtonClick = () => {
     search(inputRef.current);
-  }
+  };
 
   const search = async (city) => {
     try {
@@ -42,6 +36,7 @@ const Weather = () => {
         location: data.address.toUpperCase(),
         icon: data.currentConditions.icon,
       });
+      console.log(data.currentConditions.icon, data)
     } catch (error) {
       console.log(error);
     }
@@ -60,9 +55,13 @@ const Weather = () => {
           onKeyDown={handleInputKeyPress}
           placeholder="Search"
         />
-        <img src={search_icon} alt="search" onClick={handleButtonClick}/>
+        <img src={search_icon} alt="search" onClick={handleButtonClick} />
       </div>
-      <img className="weather-icon" src={clear_icon} alt="clear" />
+      <div>
+        <svg className="weather-conditions">
+          <use href={`/weatherConditions.svg#${weatherData.icon}`}></use>
+        </svg>
+      </div>
       <p className="temperature">{weatherData.temperature}°C</p>
       <p className="location">{weatherData.location}</p>
       <div className="weather-data">
