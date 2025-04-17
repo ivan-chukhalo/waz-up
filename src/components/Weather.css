@@ -1,3 +1,12 @@
+:root{
+    --page-background-color: #f0f4f8;
+    --interface-background-color: #ffffff;
+    --text-n-icons-color: #1e293b;
+    --highlight-color: #3b82f6;
+    --block-shadow-color: rgba(0, 0, 0, 0.1);
+    --element-background-color: #e2e8f0;
+}
+
 .weather {
   place-self: center;
   padding: 40px;
