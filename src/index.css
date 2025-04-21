@@ -2,13 +2,29 @@
 
 :root {
   --page-background-color: #f0f4f8;
+  --interface-background-color: #ffffff;
+  --text-n-icons-primary-color: #1e293b;
+  --text-n-icons-secondary-color: #64748b;
+  --block-shadow-color: rgba(0, 0, 0, 0.1);
+  --element-background-color: #e2e8f0;
+  --highlight-color: #bfdbfe;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.dark {
+  --interface-background-color: #1e293b;
+  --text-n-icons-primary-color: #ffffff;
+  --text-n-icons-secondary-color: #cbd5e1;
+  --block-shadow-color: rgba(0, 0, 0, 0.3);
+  --element-background-color: #334155;
+  --highlight-color: #60a5fa;
+  --page-background-color: #12181f;
 }
 
 .app {
