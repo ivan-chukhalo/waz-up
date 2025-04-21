@@ -14,5 +14,5 @@ export default function useTheme() {
     document.documentElement.classList.toggle("dark", theme === "dark");
   };
 
-  return { toggleTheme };
+  return { theme, toggleTheme };
 }
