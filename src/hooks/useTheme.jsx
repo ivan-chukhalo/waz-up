@@ -10,8 +10,9 @@ export default function useTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
-    theme === "dark" ? setTheme("light") : setTheme("dark");
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
   return { theme, toggleTheme };
