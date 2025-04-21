@@ -7,6 +7,15 @@
   --highlight-color: #bfdbfe;
 }
 
+.dark {
+  --interface-background-color: #1e293b;
+  --text-n-icons-primary-color: #ffffff;
+  --text-n-icons-secondary-color: #cbd5e1;
+  --block-shadow-color: rgba(0, 0, 0, 0.3);
+  --element-background-color: #334155;
+  --highlight-color: #60a5fa;
+}
+
 .weather {
   place-self: center;
   padding: 40px;
@@ -51,8 +60,8 @@
 }
 
 .search-bar img:hover {
-    background: var(--highlight-color);
-    transition: all 0.3s ease-in-out; /*-------------------*/
+  background: var(--highlight-color);
+  transition: all 0.3s ease-in-out; /*-------------------*/
 }
 
 .weather-icon {

@@ -21,7 +21,6 @@ const Weather = () => {
   const handleButtonClick = () => {
     search(inputRef.current);
   };
-
   const search = async (city) => {
     try {
       const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/?key=${
@@ -36,7 +35,7 @@ const Weather = () => {
         location: data.address.toUpperCase(),
         icon: data.currentConditions.icon,
       });
-      console.log(data.currentConditions.icon, data)
+      console.log(data.currentConditions.icon, data);
     } catch (error) {
       console.log(error);
     }
