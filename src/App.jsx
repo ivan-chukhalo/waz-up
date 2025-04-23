@@ -7,7 +7,7 @@ const App = () => {
 const {theme} = useTheme()
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={`app`}>
       <Weather/>
     </div>
   )
