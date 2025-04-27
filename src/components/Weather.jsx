@@ -36,7 +36,6 @@ const Weather = () => {
         location: data.address.toUpperCase(),
         icon: data.currentConditions.icon,
       });
-      console.log(data.currentConditions.icon, data);
     } catch (error) {
       console.log(error);
     }
