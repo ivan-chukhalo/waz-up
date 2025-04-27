@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 
+const browserTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
+
 export default function useTheme() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
+    return localStorage.getItem("theme") || browserTheme;
   });
 
   useEffect(() => {
