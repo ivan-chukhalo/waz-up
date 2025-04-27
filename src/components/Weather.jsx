@@ -3,7 +3,7 @@ import "./Weather.css";
 import search_icon from "../assets/icons/search.png";
 import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
-import ThemeToogler from "./ThemeToggler";
+import ThemeToggler from "./ThemeToggler";
 
 const Weather = () => {
   let inputRef = useRef(null);
@@ -80,7 +80,7 @@ const Weather = () => {
           </div>
         </div>
       </div>
-      <ThemeToogler />
+      <ThemeToggler />
     </div>
   );
 };
