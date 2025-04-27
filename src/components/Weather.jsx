@@ -10,17 +10,19 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(false);
 
   const handleInput = (event) => {
-    inputRef.current = event.target.value;
+    inputRef.current.value = event.target.value;
   };
 
   const handleInputKeyPress = (event) => {
     if (event.key === "Enter") {
-      search(inputRef.current);
+      search(inputRef.current.value);
+      inputRef.current.value = "";
     }
   };
 
   const handleButtonClick = () => {
-    search(inputRef.current);
+    search(inputRef.current.value);
+    inputRef.current.value = "";
   };
   const search = async (city) => {
     try {
@@ -50,6 +52,7 @@ const Weather = () => {
       <div className="search-bar">
         <input
           type="text"
+          ref={inputRef}
           onInput={handleInput}
           onKeyDown={handleInputKeyPress}
           placeholder="Search"
