@@ -92,3 +92,9 @@
   padding: 15px;
   fill: var(--text-n-icons-primary-color);
 }
+
+.toggler-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
