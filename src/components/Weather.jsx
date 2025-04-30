@@ -4,7 +4,7 @@ import search_icon from "../assets/icons/search.png";
 import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
 import ThemeToggler from "./ThemeToggler";
-import LanguageToggler from './LanguageToggler';
+import LanguageToggler from "./LanguageToggler";
 
 const Weather = () => {
   let inputRef = useRef(null);
@@ -83,8 +83,10 @@ const Weather = () => {
           </div>
         </div>
       </div>
-      <ThemeToggler />
-      <LanguageToggler />
+      <div className="toggler-container">
+        <ThemeToggler />
+        <LanguageToggler />
+      </div>
     </div>
   );
 };
