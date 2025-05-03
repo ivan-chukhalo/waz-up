@@ -5,10 +5,12 @@ import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
 import ThemeToggler from "./ThemeToggler";
 import LanguageToggler from "./LanguageToggler";
-
+import { useTranslation } from "react-i18next"; // though this hook we will get access to t() function for that provedes translation from our localization files
 const Weather = () => {
   let inputRef = useRef(null);
   const [weatherData, setWeatherData] = useState(false);
+
+  const { t } = useTranslation(); // destructure t() function from the hook to use it in the component to display the text in the current language
 
   const handleInput = (event) => {
     inputRef.current.value = event.target.value;
@@ -72,14 +74,18 @@ const Weather = () => {
           <img src={humidity_icon} alt="humidity" />
           <div>
             <p>{weatherData.humidity}%</p>
-            <span>Humidity</span>
+            <span>{t("humidity")}</span>{" "}
+            {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
         <div className="col">
           <img src={wind_icon} alt="wind" />
           <div>
-            <p>{weatherData.windSpeed} m/h</p>
-            <span>Wind Speed</span>
+            <p>
+              {weatherData.windSpeed} {t("m_per_hour")}
+            </p>
+            <span>{t("wind_speed")}</span>
+            {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
       </div>
