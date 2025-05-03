@@ -32,15 +32,3 @@
   display: grid;
   background: var(--page-background-color);
 }
-
-.toggler-btn {
-  font-size: 32px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--element-background-color);
-}
-
-.toggler-btn:hover {
-  background: var(--highlight-color);
-  transition: all 0.7s ease-in-out;
-}
