@@ -85,7 +85,7 @@ const Weather = () => {
               {weatherData.windSpeed} {t("m_per_hour")}
             </p>
             <span>{t("wind_speed")}</span>
-            {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
+            {/* The t() function takes the key "wind_speed" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
       </div>
