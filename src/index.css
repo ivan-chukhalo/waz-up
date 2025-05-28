@@ -27,9 +27,3 @@
   --highlight-color: #60a5fa;
   --page-background-color: #12181f;
 }
-
-.app {
-  min-height: 100vh;
-  display: grid;
-  background: var(--page-background-color);
-}
