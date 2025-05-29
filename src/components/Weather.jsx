@@ -6,6 +6,7 @@ import humidity_icon from "../assets/icons/humidity.png";
 import ThemeToggler from "./ThemeToggler";
 import LanguageToggler from "./LanguageToggler";
 import { useTranslation } from "react-i18next"; // though this hook we will get access to t() function for that provedes translation from our localization files
+
 const Weather = () => {
   let inputRef = useRef(null);
   const [weatherData, setWeatherData] = useState(false);
@@ -51,7 +52,19 @@ const Weather = () => {
   }, []);
 
   return (
-    <div className="weather">
+    <div
+      className="
+      p-10
+      place-self-center
+      rounded-lg
+      bg-[var(--interface-background-color)]
+      flex 
+      flex-col
+      items-center
+      text-[var(--text-n-icons-primary-color)]
+      shadow-[10px_10px_5px_0px_var(--block-shadow-color)]
+      "
+    >
       <div className="search-bar">
         <input
           type="text"

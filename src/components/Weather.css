@@ -1,15 +1,3 @@
-.weather {
-  place-self: center;
-  padding: 40px;
-  border-radius: 10px;
-  background-color: var(--interface-background-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-n-icons-primary-color);
-  box-shadow: 10px 10px 5px 0px var(--block-shadow-color);
-}
-
 .search-bar {
   display: flex;
   align-items: center;
