@@ -65,7 +65,7 @@ const Weather = () => {
       shadow-[10px_10px_5px_0px_var(--block-shadow-color)]
       "
     >
-      <div className="search-bar flex items-center gap-3">
+      <div className="flex items-center gap-3">
         <input
           type="text"
           ref={inputRef}
