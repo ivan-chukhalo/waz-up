@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Weather.css";
 import search_icon from "../assets/icons/search.png";
 import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
@@ -89,33 +88,33 @@ const Weather = () => {
         />
       </div>
       <div>
-        <svg className="weather-conditions">
+        <svg className="w-38 p-4 fill-[var(--text-n-icons-primary-color)]">
           <use href={`/weatherConditions.svg#${weatherData.icon}`}></use>
         </svg>
       </div>
-      <p className="temperature">{weatherData.temperature}°C</p>
-      <p className="location">{weatherData.location}</p>
-      <div className="weather-data">
-        <div className="col">
-          <img src={humidity_icon} alt="humidity" />
+      <p className="text-8xl leading-none text-[var(--text-n-icons-primary-color)]">{weatherData.temperature}°C</p>
+      <p className="text-4xl text-[var(--text-n-icons-primary-color)]">{weatherData.location}</p>
+      <div className="w-full flex my-6 justify-between text-[var(--text-n-icons-primary-color)]">
+        <div className="flex gap-3 items-start text-2xl">
+          <img className="w-6 mt-3" src={humidity_icon} alt="humidity" />
           <div>
             <p>{weatherData.humidity}%</p>
-            <span>{t("humidity")}</span>{" "}
+            <span className="block text-lg">{t("humidity")}</span>{" "}
             {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
-        <div className="col">
-          <img src={wind_icon} alt="wind" />
+        <div className="flex gap-3 items-start text-2xl">
+          <img className="w-6 mt-3" src={wind_icon} alt="wind" />
           <div>
             <p>
               {weatherData.windSpeed} {t("m_per_hour")}
             </p>
-            <span>{t("wind_speed")}</span>
+            <span className="block text-lg">{t("wind_speed")}</span>
             {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
       </div>
-      <div className="toggler-container">
+      <div className="flex gap-6 justify-center">
         <ThemeToggler />
         <LanguageToggler />
       </div>
