@@ -65,15 +65,28 @@ const Weather = () => {
       shadow-[10px_10px_5px_0px_var(--block-shadow-color)]
       "
     >
-      <div className="search-bar">
+      <div className="search-bar flex items-center gap-3">
         <input
           type="text"
           ref={inputRef}
           onInput={handleInput}
           onKeyDown={handleInputKeyPress}
           placeholder="Search"
+          className="
+          h-12 border-none outline-none rounded-full pl-6 
+          color-[var(--text-n-icons-secondary-color)] bg-[var(--element-background-color)] text-xl
+          hover:bg-[var(--highlight-color)] hover:transition-all duration-300 ease-in-out"
         />
-        <img src={search_icon} alt="search" onClick={handleButtonClick} />
+        <img
+          src={search_icon}
+          alt="search"
+          onClick={handleButtonClick}
+          className="
+          w-12 p-4 rounded-full cursor-pointer
+          bg-[var(--element-background-color)]
+          hover:bg-[var(--highlight-color)]
+          hover:transition-all hover:duratin-300 ease-in-out"
+        />
       </div>
       <div>
         <svg className="weather-conditions">
