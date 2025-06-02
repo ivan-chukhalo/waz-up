@@ -1,16 +1,15 @@
-import React from 'react'
-import Weather from './components/Weather'
-import useTheme from './hooks/useTheme'
+import React from "react";
+import Weather from "./components/Weather";
+import useTheme from "./hooks/useTheme";
 
 const App = () => {
-
-const {theme} = useTheme()
+  const { theme } = useTheme();
 
   return (
-    <div className={`app`}>
-      <Weather/>
+    <div className={`grid min-h-dvh bg-[var(--page-background-color)]`}>
+      <Weather />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
