@@ -68,7 +68,7 @@ const Weather = () => {
           placeholder="Search"
           className="
           basis-auto shrink-1
-          w-full h-16 sm:h-12 border-none outline-none rounded-full pl-6 
+          w-full h-16 sm:h-12 border-none outline-none rounded-full pl-0 sm:pl-6 
           text-center sm:text-left color-[var(--text-n-icons-secondary-color)] bg-[var(--element-background-color)] text-xl
           hover:bg-[var(--highlight-color)] hover:transition-all duration-300 ease-in-out"
         />
