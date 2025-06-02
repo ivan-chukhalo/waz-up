@@ -53,18 +53,13 @@ const Weather = () => {
   return (
     <div
       className="
-      p-10
-      place-self-center
-      rounded-lg
-      bg-[var(--interface-background-color)]
-      flex 
-      flex-col
-      items-center
-      text-[var(--text-n-icons-primary-color)]
-      shadow-[10px_10px_5px_0px_var(--block-shadow-color)]
-      "
+      w-full h-full sm:w-auto sm:h-auto
+      flex place-self-center flex-col items-center justify-evenly sm:items-evenly
+      px-10 sm:p-10 rounded-lg 
+      bg-[var(--interface-background-color)] shadow-[10px_10px_5px_0px_var(--block-shadow-color)]
+      text-[var(--text-n-icons-primary-color)]"
     >
-      <div className="flex items-center gap-3">
+      <div className="search-section flex items-center gap-4 sm:gap-2">
         <input
           type="text"
           ref={inputRef}
@@ -72,18 +67,18 @@ const Weather = () => {
           onKeyDown={handleInputKeyPress}
           placeholder="Search"
           className="
-          h-12 border-none outline-none rounded-full pl-6 
-          color-[var(--text-n-icons-secondary-color)] bg-[var(--element-background-color)] text-xl
+          basis-auto shrink-1
+          w-full h-16 sm:h-12 border-none outline-none rounded-full pl-6 
+          text-center sm:text-left color-[var(--text-n-icons-secondary-color)] bg-[var(--element-background-color)] text-xl
           hover:bg-[var(--highlight-color)] hover:transition-all duration-300 ease-in-out"
         />
         <img
           src={search_icon}
           alt="search"
           onClick={handleButtonClick}
-          className="
-          w-12 p-4 rounded-full cursor-pointer
-          bg-[var(--element-background-color)]
-          hover:bg-[var(--highlight-color)]
+          className="search-section__button
+          w-14 p-2 sm:w-12 rounded-full cursor-pointer shrink-0
+          bg-[var(--element-background-color)] hover:bg-[var(--highlight-color)]
           hover:transition-all hover:duratin-300 ease-in-out"
         />
       </div>
@@ -92,19 +87,23 @@ const Weather = () => {
           <use href={`/weatherConditions.svg#${weatherData.icon}`}></use>
         </svg>
       </div>
-      <p className="text-8xl leading-none text-[var(--text-n-icons-primary-color)]">{weatherData.temperature}°C</p>
-      <p className="text-4xl text-[var(--text-n-icons-primary-color)]">{weatherData.location}</p>
+      <p className="text-6xl sm:text-8xl leading-none text-[var(--text-n-icons-primary-color)]">
+        {weatherData.temperature}°C
+      </p>
+      <p className="text-4xl text-[var(--text-n-icons-primary-color)]">
+        {weatherData.location}
+      </p>
       <div className="w-full flex my-6 justify-between text-[var(--text-n-icons-primary-color)]">
-        <div className="flex gap-3 items-start text-2xl">
-          <img className="w-6 mt-3" src={humidity_icon} alt="humidity" />
+        <div className="flex gap-3 items-center text-2xl">
+          <img className="w-8" src={humidity_icon} alt="humidity" />
           <div>
             <p>{weatherData.humidity}%</p>
             <span className="block text-lg">{t("humidity")}</span>{" "}
             {/* The t() function takes the key "humidity" — this is a string identifier, not the actual text. It then refers to the i18n instance and looks up the translation for the "humidity" key in the current language.  */}
           </div>
         </div>
-        <div className="flex gap-3 items-start text-2xl">
-          <img className="w-6 mt-3" src={wind_icon} alt="wind" />
+        <div className="flex gap-3 items-center text-2xl">
+          <img className="w-8" src={wind_icon} alt="wind" />
           <div>
             <p>
               {weatherData.windSpeed} {t("m_per_hour")}
