@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import search_icon from "../assets/icons/search.png";
 import wind_icon from "../assets/icons/wind.png";
 import humidity_icon from "../assets/icons/humidity.png";
 import ThemeToggler from "./ThemeToggler";
@@ -72,15 +71,16 @@ const Weather = () => {
           text-center sm:text-left color-[var(--text-n-icons-secondary-color)] bg-[var(--element-background-color)] text-xl
           hover:bg-[var(--highlight-color)] hover:transition-all duration-300 ease-in-out"
         />
-        <img
-          src={search_icon}
-          alt="search"
+        <svg
           onClick={handleButtonClick}
-          className="search-section__button
-          w-14 p-2 sm:w-12 rounded-full cursor-pointer shrink-0
+          className="
+          fill-[var(--text-n-icons-primary-color)]
+          w-14 h-14 p-2 sm:w-12 sm:h-12 rounded-full cursor-pointer shrink-0
           bg-[var(--element-background-color)] hover:bg-[var(--highlight-color)]
           hover:transition-all hover:duratin-300 ease-in-out"
-        />
+        >
+          <use href={"/weatherConditions.svg#search"}></use>
+        </svg>
       </div>
       <div>
         <svg className="w-38 p-4 fill-[var(--text-n-icons-primary-color)]">
