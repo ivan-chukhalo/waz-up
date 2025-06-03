@@ -95,7 +95,9 @@ const Weather = () => {
       </p>
       <div className="w-full flex my-6 justify-between text-[var(--text-n-icons-primary-color)]">
         <div className="flex gap-3 items-center text-2xl">
-          <img className="w-8" src={humidity_icon} alt="humidity" />
+          <svg className="w-10 fill-[var(--text-n-icons-primary-color)]">
+            <use href="/weatherConditions.svg#humidity"></use>
+          </svg>
           <div>
             <p>{weatherData.humidity}%</p>
             <span className="block text-lg">{t("humidity")}</span>{" "}
@@ -103,7 +105,9 @@ const Weather = () => {
           </div>
         </div>
         <div className="flex gap-3 items-center text-2xl">
-          <img className="w-8" src={wind_icon} alt="wind" />
+          <svg className="w-10 stroke-[var(--text-n-icons-primary-color)]">
+            <use href="/weatherConditions.svg#wind_speed"></use>
+          </svg>
           <div>
             <p>
               {weatherData.windSpeed} {t("m_per_hour")}
