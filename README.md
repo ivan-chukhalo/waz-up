@@ -21,11 +21,6 @@ Check out how this project works by this [link](https://waz-up.vercel.app/). The
 ✅ Sync of theme and language preferences across `LocalStorage`, `DOM`, and app state for a consistent experience.<br>
 ✅ Weather icons displayed via SVG sprite — the app dynamically shows icons (sunny, cloudy, rainy, etc.) based on current conditions.
 
-## 🐞 Known Issues
-
-❌ The app is not responsive across different screen sizes.<br>
-❌ The _Wind Speed_ and _Humidity_ icons do not respond to theme changes and "disappear" in light mode. SVGs should be used instead.
-
 ## 🚀 Installation & Setup
 
 ### 1. Clone the repository:
