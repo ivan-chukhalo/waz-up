@@ -5,8 +5,8 @@ import useTheme from "../hooks/useTheme";
 const ThemeToggler = () => {
   const { theme, toggleTheme } = useTheme();
   const valueList = {
-    light: `🌞`,
-    dark: `🌙`,
+    light: `🌙`,
+    dark: `🌞`,
   };
 
   return (
