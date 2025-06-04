@@ -10,9 +10,17 @@ Check out how this project works by this [link](https://waz-up.vercel.app/). The
 
 ## 🛠️ Technologies
 
-- **Vite**
-- **React**
-- **[i18n](https://github.com/i18next/i18next)** – for localization
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+  <img src="https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=%2361dbfb" height="40">
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=%2306B6D4" height="40">
+  <img src="https://img.shields.io/badge/i18next-black?style=for-the-badge&logo=i18next&logoColor=white" height="40">
+  <img src="https://img.shields.io/badge/Vite-black?style=for-the-badge&logo=vite&logoColor=%23646CFF" height="40">
+  <img src="https://img.shields.io/badge/NPM-black?style=for-the-badge&logo=npm&logoColor=%23CB3837" height="40">
+  <img src="https://img.shields.io/badge/Git-black?style=for-the-badge&logo=git&logoColor=%23F05032" height="40">
+  <img src="https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript&logoColor=%23FFFF00" height="40">
+  <img src="https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5&logoColor=%23e34c26" height="40">
+  <img src="https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=css&logoColor=rebeccapurple" height="40">
+</div>
 
 ## ⚙️ Features
 
