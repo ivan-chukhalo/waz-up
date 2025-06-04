@@ -5,8 +5,8 @@ import useLanguage from "../hooks/useLanguage";
 const LanguageToggler = () => {
   const { language, toggleLanguage } = useLanguage();
   const valueList = {
-    uk: "🇺🇦",
-    en: "🇬🇧",
+    uk: "🇬🇧",
+    en: "🇺🇦",
   };
 
   return (
